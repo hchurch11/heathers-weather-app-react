@@ -48,7 +48,7 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div id="current-conditions">
+      <div className="current-conditions">
         <ul>
           <li className="extra" id="feels-like">
             feels-like: {weatherData.feelsLike}º
