@@ -1,0 +1,9 @@
+.App .btn {
+    background-color: #166678;
+    color: #d8d7c3;
+}
+
+.App .active {
+    background-color: #0d424e;
+    pointer-events: none;
+}
