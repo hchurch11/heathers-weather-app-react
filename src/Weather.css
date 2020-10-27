@@ -1,0 +1,77 @@
+.Weather .current-conditions ul {
+    background-color: #166678;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 30px;
+    opacity: 70%;
+    margin: 0 auto;
+}
+
+.Weather li {
+    display: inline;
+    padding: 0px 40px;
+    text-align: center;
+}
+
+.Weather h1 {
+    font-family: "Major Mono Display", monospace;
+    margin-top: 60px;
+}
+
+.Weather .city {
+    text-align: center;
+}
+
+.Weather .weather-state {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.Weather #temp-today, #temp {
+    text-align: right;
+}
+
+.Weather .currentCity, .temp {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.Weather .citySearch {
+    padding: 20px 0;
+}
+
+.Weather .current-temp {
+    font-size: 100px;
+}
+
+.Weather .current-temp::after {
+    content: "º";
+    font-size: 30px;
+    vertical-align: top;
+}
+
+.Weather .high {
+    font-size: 38px;
+    color: #d8d7c3;
+    font-weight: 900;
+}
+
+.Weather .weather-state {
+    font-size: 80px;
+}
+
+.weather-icon-today {
+    width: 60px;
+    animation: wiggle2 5s alternate linear infinite both;
+}
+
+@keyframes wiggle2 {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}

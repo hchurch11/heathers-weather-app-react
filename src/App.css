@@ -1,37 +1,4 @@
-.WeatherApp .current-conditions ul {
-  background-color: #166678;
-  border-radius: 4px;
-  font-size: 18px;
-  padding: 30px;
-  opacity: 70%;
-  margin: 0 auto;
-}
-
-.WeatherApp li {
-  display: inline;
-  padding: 0px 40px;
-  text-align: center;
-}
-
-.WeatherApp h1 {
-  font-family: "Major Mono Display", monospace;
-  margin-top: 60px;
-}
-
-.WeatherApp .city {
-  text-align: center;
-}
-
-.WeatherApp .weather-state {
-  text-align: center;
-  margin-top: 0px;
-}
-
-.WeatherApp #temp-today, #temp {
-  text-align: right;
-}
-
-.WeatherApp {
+.App {
   background-color: #0e2e3b;
   background-image: url("./casey-horner-unsplash.png");
   background-size: cover;
@@ -44,49 +11,4 @@
   font-family: "Julius Sans One", sans-serif;
   font-weight: bolder;
   font-variant: small-caps;
-}
-
-.WeatherApp .currentCity, .temp {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 40px;
-}
-
-.WeatherApp .citySearch {
-  padding: 20px 0;
-}
-
-.WeatherApp .current-temp {
-  font-size: 100px;
-}
-
-.WeatherApp .current-temp::after {
-  content: "º";
-  font-size: 30px;
-  vertical-align: top;
-}
-
-.WeatherApp .high {
-  font-size: 38px;
-  color: #d8d7c3;
-  font-weight: 900;
-}
-
-.WeatherApp .weather-state {
-  font-size: 80px;
-}
-
-.weather-icon-today {
-  width: 60px;
-  animation: wiggle2 5s alternate linear infinite both;
-}
-
-@keyframes wiggle2 {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(50%);
-  }
 }
