@@ -7,12 +7,13 @@ export default function Footer() {
     <div className="Footer">
       <a
         className="gitHubLink"
-        href="https://github.com/hchurch11/heathers-weather-app-2"
+        href="https://github.com/hchurch11/heathers-weather-app-react"
       >
-        open-source
+        open-sourced
       </a>{" "}
-      code by Heather Church
+      code created with
       <img src={logo} className="App-logo" alt="logo" />
+      by Heather Church
     </div>
   );
 }
