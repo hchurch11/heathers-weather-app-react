@@ -33,15 +33,13 @@ export default function Search() {
         <div className="col">
           <button
             type="button"
-            className="btn btn-info btn-sm float-right "
-            id="celsius-link"
+            className="btn btn-info btn-sm float-right celsius-link"
           >
             C
           </button>
           <button
             type="button"
-            className="active btn btn-info btn-sm float-right"
-            id="fahrenheit-link"
+            className="active btn btn-info btn-sm float-right fahrenheit-link"
           >
             F
           </button>
