@@ -1,17 +1,13 @@
-.Search .btn {
+.Conversion .btn {
     background-color: #166678;
     color: #d8d7c3;
 }
 
-.Search .active {
+.Conversion .active {
     background-color: #0d424e;
     pointer-events: none;
 }
 
-.Search .float-right {
+.Conversion .float-right {
     margin-left: 10px;
-}
-
-.Search .citySearch {
-    padding: 20px 0;
 }

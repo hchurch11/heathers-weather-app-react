@@ -1,0 +1,71 @@
+/* Current Weather DIV */
+
+.WeatherInfo {
+    margin-top: 50px;
+}
+
+.WeatherInfo .currentWeather {
+    padding: 10px;
+}
+
+.WeatherInfo h1 {
+    font-family: "Major Mono Display", monospace;
+}
+
+/* float-Left */
+
+.WeatherInfo .currentCity {
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0;
+}
+
+/* float-center */
+
+.WeatherInfo .weather-description {
+    text-align: center;
+    margin-top: 0px;
+}
+
+/* float-right */
+
+.float-right {
+    text-align: right;
+}
+
+.Weather .currentTemp {
+    font-size: 38px;
+    color: #d8d7c3;
+    font-weight: 900;
+}
+
+/* Current Conditions DIV */
+
+.Weather .current-conditions ul {
+    background-color: #166678;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 5px;
+    opacity: 70%;
+    margin-top: 50px;
+}
+
+.WeatherInfo li {
+    display: inline;
+    padding: 0 10px;
+}
+
+.weather-icon-today {
+    width: 60px;
+    animation: wiggle2 5s alternate linear infinite both;
+}
+
+@keyframes wiggle2 {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}

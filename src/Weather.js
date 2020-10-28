@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
-import FormattedHours from "./FormattedHours";
+import Conversion from "./Conversion";
+import searchIcon from "./icons8-search.png";
+import locationIcon from "./icons8-location.png";
+import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -25,63 +29,63 @@ export default function Weather() {
     });
   }
 
+  function search() {
+    const apiKey = "a8c8f7d25b7901021cffbfe31b57f387";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function changeCity(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.loaded) {
     return (
       <div className="Weather">
-        <div className="currentWeather">
-          <div className="row">
-            <div className="col-4 currentCity float-left">
-              <h1 className="city">{weatherData.city}</h1>
-              <h3 className="currentTime text-lowercase">
-                <FormattedHours date={weatherData.date} />
-              </h3>
-              <p className="currentDate">
-                <FormattedDate date={weatherData.date} />
-              </p>
-            </div>
-            <div className="col-4 weather-description float-center">
-              <h2>
-                <img
-                  className="weather-icon-today"
-                  src={weatherData.icon}
-                  alt="{weatherData.description}"
-                />
-              </h2>
-              <h2 className="sky text-capitalize ">
-                {weatherData.description}
-              </h2>
-            </div>
-            <div className="col-4 float-right">
-              <h1 className="currentTemp">{weatherData.temp}º</h1>
-              <h2 className="highLow">
-                {weatherData.highTemp}º | {weatherData.lowTemp}º
-              </h2>
-            </div>
+        <form className="form-row" onSubmit={handleSubmit}>
+          <div className="col-4">
+            <input
+              type="text"
+              className="form-control form-control-sm bg"
+              placeholder="Enter City"
+              autoFocus="on"
+              onChange={changeCity}
+            />
           </div>
-        </div>
-        <div className="current-conditions">
-          <ul>
-            <li className="extra" id="feels-like">
-              feels-like: {weatherData.feelsLike}º
-            </li>
-            <li> | </li>
-            <li className="extra" id="humidity">
-              humidity: {weatherData.humidity}%
-            </li>
-            <li> | </li>
-            <li className="extra" id="wind">
-              wind: {weatherData.wind} mph
-            </li>
-          </ul>
+          <div className="col-1">
+            <button
+              type="button"
+              className="btn btn-info btn-sm"
+              value="search"
+            >
+              {" "}
+              <img src={searchIcon} alt="search-icon" />
+            </button>
+          </div>
+          <div className="col-1">
+            <button type="button" className="btn btn-info btn-sm">
+              <img src={locationIcon} alt="location-icon" />
+            </button>
+          </div>
+          <Conversion />
+        </form>
+        <WeatherInfo data={weatherData} />
+        <div className="row forecast">
+          <Forecast />
+          <Forecast />
+          <Forecast />
+          <Forecast />
+          <Forecast />
         </div>
       </div>
     );
   } else {
-    const apiKey = "a8c8f7d25b7901021cffbfe31b57f387";
-    let city = "Salt Lake City";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "loading. . . ";
   }
 }

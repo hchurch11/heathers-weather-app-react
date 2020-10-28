@@ -4,7 +4,7 @@ export default function FormattedHours(props) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let weekDay = days[props.date.getDay()];
 
-  function formatNonMilHours(props) {
+  function formatMilitaryHours(props) {
     let hours = props.date.getHours();
     if (hours < 10) {
       hours = `0${hours}`;
@@ -26,7 +26,7 @@ export default function FormattedHours(props) {
 
   return (
     <div className="formattedHours">
-      {weekDay} | {formatNonMilHours(props)}
+      {weekDay} | {formatMilitaryHours(props)}
     </div>
   );
 }
