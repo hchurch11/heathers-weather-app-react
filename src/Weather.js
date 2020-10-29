@@ -25,7 +25,7 @@ export default function Weather(props) {
       feelsLike: Math.round(response.data.main.feels_like),
       highTemp: Math.round(response.data.main.temp_max),
       lowTemp: Math.round(response.data.main.temp_min),
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -33,6 +33,19 @@ export default function Weather(props) {
     const apiKey = "a8c8f7d25b7901021cffbfe31b57f387";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
+  }
+  function searchGeoLocation(response) {
+    let latitude = response.coord.lat;
+    let longitude = response.coord.lat;
+
+    const apiKey = "a8c8f7d25b7901021cffbfe31b57f387";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleGeoLocation(event) {
+    event.preventDefault();
+    searchGeoLocation();
   }
 
   function handleSubmit(event) {
@@ -68,7 +81,11 @@ export default function Weather(props) {
             </button>
           </div>
           <div className="col-1">
-            <button type="button" className="btn btn-info btn-sm">
+            <button
+              type="button"
+              className="btn btn-info btn-sm"
+              onClick={handleGeoLocation}
+            >
               <img src={locationIcon} alt="location-icon" />
             </button>
           </div>
