@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import FormattedHours from "./FormattedHours";
 import "./WeatherInfo.css";
 import WeatherIcon from "./WeatherIcon";
+import Conversion from "./Conversion";
 
 export default function WeatherInfo(props) {
   return (
@@ -23,11 +24,13 @@ export default function WeatherInfo(props) {
           </h2>
           <h2 className="sky text-capitalize ">{props.data.description}</h2>
         </div>
-        <div className="col-4 float-right">
-          <h1 className="currentTemp">{props.data.temp}º</h1>
-          <h2 className="highLow">
-            {props.data.highTemp}º | {props.data.lowTemp}º
-          </h2>
+
+        <div className="col-4 float-right Conversion">
+          <Conversion
+            fahrenheit={props.data.temp}
+            high={props.data.highTemp}
+            low={props.data.lowTemp}
+          />
         </div>
       </div>
       <div className="current-conditions">

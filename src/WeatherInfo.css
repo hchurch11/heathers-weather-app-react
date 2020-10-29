@@ -28,21 +28,13 @@
     margin-top: 0px;
 }
 
-/* float-right */
-
-.float-right {
-    text-align: right;
-}
-
-.Weather .currentTemp {
-    font-size: 38px;
-    color: #d8d7c3;
-    font-weight: 900;
+.Conversion .float-right {
+    margin-left: 10px;
 }
 
 /* Current Conditions DIV */
 
-.Weather .current-conditions ul {
+.WeatherInfo .current-conditions ul {
     background-color: #166678;
     border-radius: 4px;
     font-size: 18px;

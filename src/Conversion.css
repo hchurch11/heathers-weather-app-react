@@ -1,4 +1,6 @@
 .Conversion .btn {
+    display: block;
+    margin-left: 10px;
     background-color: #166678;
     color: #d8d7c3;
 }
@@ -8,6 +10,8 @@
     pointer-events: none;
 }
 
-.Conversion .float-right {
-    margin-left: 10px;
+.Conversion .currentTemp {
+    font-size: 80px;
+    color: #d8d7c3;
+    font-weight: 900;
 }

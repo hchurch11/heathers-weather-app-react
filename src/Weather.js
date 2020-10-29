@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
-import Conversion from "./Conversion";
 import searchIcon from "./icons8-search.png";
 import locationIcon from "./icons8-location.png";
 import WeatherInfo from "./WeatherInfo";
@@ -89,7 +88,6 @@ export default function Weather(props) {
               <img src={locationIcon} alt="location-icon" />
             </button>
           </div>
-          <Conversion />
         </form>
         <WeatherInfo data={weatherData} />
         <div className="row forecast">
