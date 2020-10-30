@@ -1,7 +1,7 @@
 .App {
   background-color: #0e2e3b;
   background-image: url("./casey-horner-unsplash.png");
-  background-size: cover;
+  background-size: 100% 100%;
   color: #d8d7c3;
   max-width: 800px;
   display: block;

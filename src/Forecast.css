@@ -10,22 +10,8 @@
 }
 
 .futureDate:hover {
-    background-color: #d8d7c3;
-    color: #0e2e3b;
+    color: #d8d7c3;
+    background-color: #0e2e3b;
     cursor: pointer;
     opacity: 0.6;
-}
-
-.futureWeatherIcon {
-    width: 40px;
-    animation: wiggle1 5s alternate linear infinite both;
-}
-
-@keyframes wiggle1 {
-    from {
-        transform: translateX(-20%);
-    }
-    to {
-        transform: translateX(20%);
-    }
 }

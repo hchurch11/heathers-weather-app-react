@@ -14,11 +14,11 @@
 
 /* float-Left */
 
-.WeatherInfo .currentCity {
+.WeatherInfo .float-left {
     display: block;
     margin: 0 auto;
     text-align: left;
-    padding: 0;
+    padding-left: 10px;
 }
 
 /* float-center */
@@ -40,7 +40,7 @@
     font-size: 18px;
     padding: 5px;
     opacity: 70%;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .WeatherInfo li {
@@ -48,7 +48,7 @@
     padding: 0 10px;
 }
 
-.weather-icon-today {
+.WeatherInfo .weather-description {
     width: 60px;
     animation: wiggle2 5s alternate linear infinite both;
 }

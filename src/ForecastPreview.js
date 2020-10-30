@@ -20,9 +20,11 @@ export default function ForecastPreview(props) {
   }
 
   return (
-    <div className=" ForecastPreview col futureDate">
+    <div className="ForecastPreview col futureDate">
       <h4>{hours()}</h4>
-      <WeatherIcon code={props.data.weather[0].icon} />
+      <span className="weather-description">
+        <WeatherIcon code={props.data.weather[0].icon} />
+      </span>
       <h5>{description()}</h5>
       <p>{temperature()}</p>
     </div>
