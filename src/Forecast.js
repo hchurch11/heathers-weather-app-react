@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./Forecast.css";
-import icon from "../src/icons8-windy_weather.png";
 
-export default function Forecast() {
-  let futureTemp = {
-    high: "82",
-    low: "63",
-    time: "3pm",
-    description: "Mostly Sunny",
-  };
-  return (
-    <div className="col futureDate">
-      <h4>{futureTemp.time} </h4>
-      <img className="futureWeatherIcon" src={icon} alt="future-weather-icon" />
-      <h5>{futureTemp.description}</h5>
-      <p>
-        {futureTemp.high} | {futureTemp.low}°
-      </p>
-    </div>
-  );
+import ForecastPreview from "./ForecastPreview";
+
+export default function Forecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
+
+  function handleForecastResponse(response) {
+    setForecast(response.data);
+    setLoaded(true);
+  }
+
+  function getForecast() {
+    const apiKey = "a8c8f7d25b7901021cffbfe31b57f387";
+    const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=imperial`;
+    axios.get(forecastApiUrl).then(handleForecastResponse);
+  }
+
+  if (loaded && props.city === forecast.city.name) {
+    return (
+      <div className="row Forecast">
+        {forecast.list.slice(0, 5).map(function (forecastItem) {
+          return <ForecastPreview data={forecastItem} />;
+        })}
+      </div>
+    );
+  } else {
+    getForecast();
+    return "loading. . . ";
+  }
 }
