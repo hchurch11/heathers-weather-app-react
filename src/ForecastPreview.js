@@ -4,8 +4,6 @@ import WeatherIcon from "./WeatherIcon";
 export default function ForecastPreview(props) {
   function hours() {
     let date = new Date(props.data.dt * 1000);
-    /* let hours = date.getHours(); */
-
     return date.toLocaleString(`en-US`, { hour: `numeric`, hour12: true });
   }
 
@@ -21,10 +19,10 @@ export default function ForecastPreview(props) {
 
   return (
     <div className="ForecastPreview col futureDate">
-      <h4>{hours()}</h4>
-      <span className="weather-description">
+      <h3>{hours()}</h3>
+      <h4>
         <WeatherIcon code={props.data.weather[0].icon} />
-      </span>
+      </h4>
       <h5>{description()}</h5>
       <p>{temperature()}</p>
     </div>
