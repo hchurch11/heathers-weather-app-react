@@ -11,12 +11,8 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-4 float-left">
           <h1 className="city">{props.data.city}</h1>
-          <h3 className="currentTime text-lowercase">
-            <FormattedHours date={props.data.date} />
-          </h3>
-          <p className="currentDate">
-            <FormattedDate date={props.data.date} />
-          </p>
+          <FormattedHours date={props.data.date} />
+          <FormattedDate date={props.data.date} />
         </div>
         <div className="col-4 float-center">
           <h2 className=" weather-description">
@@ -24,14 +20,11 @@ export default function WeatherInfo(props) {
           </h2>
           <h2 className="sky text-capitalize ">{props.data.description}</h2>
         </div>
-
-        <div className="col-4 float-right Conversion">
-          <Conversion
-            fahrenheit={props.data.temp}
-            high={props.data.highTemp}
-            low={props.data.lowTemp}
-          />
-        </div>
+        <Conversion
+          fahrenheit={props.data.temp}
+          high={props.data.highTemp}
+          low={props.data.lowTemp}
+        />
       </div>
       <div className="current-conditions">
         <ul>

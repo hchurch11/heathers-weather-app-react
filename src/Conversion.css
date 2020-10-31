@@ -1,12 +1,12 @@
 .Conversion .btn {
     display: block;
     margin-left: 10px;
-    background-color: #166678;
+    background-color: #0d424e;
     color: #d8d7c3;
 }
 
 .Conversion .active {
-    background-color: #0d424e;
+    background-color: #166678;
     pointer-events: none;
 }
 

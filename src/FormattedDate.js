@@ -21,7 +21,9 @@ export default function FormattedDate(props) {
 
   return (
     <div className="formattedDate">
-      {date} {month} {year}
+      <p className="currentDate">
+        {date} {month} {year}
+      </p>
     </div>
   );
 }

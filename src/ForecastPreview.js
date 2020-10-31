@@ -4,7 +4,7 @@ import WeatherIcon from "./WeatherIcon";
 export default function ForecastPreview(props) {
   function hours() {
     let date = new Date(props.data.dt * 1000);
-    let hours = date.getHours();
+    /* let hours = date.getHours(); */
 
     return date.toLocaleString(`en-US`, { hour: `numeric`, hour12: true });
   }
