@@ -1,5 +1,4 @@
 .Conversion .btn {
-    display: block;
     margin-left: 10px;
     background-color: #0d424e;
     color: #d8d7c3;
@@ -11,7 +10,19 @@
 }
 
 .Conversion .currentTemp {
-    font-size: 80px;
+    font-size: 10vw;
     color: #d8d7c3;
     font-weight: 900;
+}
+
+.Conversion {
+    display: flexbox;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 767px) {
+    .conversion {
+        font-size: 100%
+    }
 }

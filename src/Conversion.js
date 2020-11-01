@@ -25,7 +25,7 @@ export default function Conversion(props) {
 
   if (unit === "fahrenheit") {
     return (
-      <div className="Conversion col-4 float-right ">
+      <div className="Conversion col-4 float-right">
         <h1 className="currentTemp unit">{props.fahrenheit}º</h1>
         <h2>
           {" "}
@@ -33,16 +33,13 @@ export default function Conversion(props) {
         </h2>
         <button
           type="button"
-          className="btn btn-info btn-sm float-right unit"
+          className="btn btn-info btn-sm "
           onClick={showCelsius}
         >
           {" "}
           C{" "}
         </button>
-        <button
-          type="button"
-          className="active btn btn-info btn-sm float-right unit"
-        >
+        <button type="button" className="active btn btn-info btn-sm ">
           {" "}
           F{" "}
         </button>
@@ -53,16 +50,13 @@ export default function Conversion(props) {
       <div className="Conversion">
         <h1 className="currentTemp unit">{celsius()}º</h1>
         <h2>{highLow()}</h2>
-        <button
-          type="button"
-          className="active btn btn-info btn-sm float-right unit"
-        >
+        <button type="button" className="active btn btn-info btn-sm ">
           {" "}
           C{" "}
         </button>
         <button
           type="button"
-          className="btn btn-info btn-sm float-right unit"
+          className="btn btn-info btn-sm "
           onClick={showFahrenheit}
         >
           {" "}

@@ -11,15 +11,19 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-4 float-left">
           <h1 className="city">{props.data.city}</h1>
-          <FormattedHours date={props.data.date} />
+          <span className="FormattedHours">
+            <FormattedHours date={props.data.date} />
+          </span>
           <FormattedDate date={props.data.date} />
         </div>
+
         <div className="col-4 float-center">
           <h2 className=" weather-description">
             <WeatherIcon code={props.data.icon} />
           </h2>
           <h2 className="sky text-capitalize ">{props.data.description}</h2>
         </div>
+
         <Conversion
           fahrenheit={props.data.temp}
           high={props.data.highTemp}

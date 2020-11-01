@@ -3,7 +3,7 @@
   background-image: url("./casey-horner-unsplash.png");
   background-size: 100% 100%;
   color: #d8d7c3;
-  max-width: 800px;
+  max-width: 1000px;
   display: block;
   margin: 0px auto;
   padding: 50px;
@@ -11,7 +11,6 @@
   font-family: "Julius Sans One", sans-serif;
   font-weight: bolder;
   font-variant: small-caps;
-  font-size: 100%;
 }
 
 @media only screen and (max-width: 767px) {
