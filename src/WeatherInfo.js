@@ -9,18 +9,16 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo container">
       <div className="row">
-        <div className="col-md-4 ">
+        <div className="col-md-4 left">
           <h1 className="city">{props.data.city}</h1>
+        </div>
+
+        <div className="col-md-4 center">
           <span className="FormattedHours">
             <FormattedHours date={props.data.date} />
           </span>
           <FormattedDate date={props.data.date} />
-        </div>
-
-        <div className="col-md-4 ">
-          <h2 className=" weather-description">
-            <WeatherIcon code={props.data.icon} />
-          </h2>
+          <WeatherIcon code={props.data.icon} />
           <h2 className="sky text-capitalize ">{props.data.description}</h2>
         </div>
 
