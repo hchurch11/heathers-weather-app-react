@@ -15,7 +15,7 @@
 /* float-Left */
 
 .WeatherInfo .float-left {
-    display: block;
+    display: flex;
     margin: 0 auto;
     text-align: left;
     padding-left: 10px;
@@ -43,9 +43,11 @@
 /* Current Conditions DIV */
 
 .WeatherInfo .current-conditions ul {
+    display: flex;
+    justify-content: center;
     background-color: #166678;
     border-radius: 4px;
-    font-size: 2vw;
+    font-size: 3vw;
     padding: 5px;
     opacity: 70%;
     margin-top: 20px;
