@@ -59,16 +59,16 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form className="form-row" onSubmit={handleSubmit}>
-          <div className="col-4">
+          <div className="col-">
             <input
               type="text"
-              className="form-control form-control-sm bg"
+              className="form-control form-control-md bg"
               placeholder="Enter City"
               autoFocus="on"
               onChange={changeCity}
             />
           </div>
-          <div className="col-1">
+          <div className="col-">
             <button
               type="button"
               className="btn btn-info btn-sm"
@@ -78,7 +78,7 @@ export default function Weather(props) {
               <img src={searchIcon} alt="search-icon" />
             </button>
           </div>
-          <div className="col-1">
+          <div className="col-">
             <button
               type="button"
               className="btn btn-info btn-sm"

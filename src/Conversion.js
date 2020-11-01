@@ -25,7 +25,7 @@ export default function Conversion(props) {
 
   if (unit === "fahrenheit") {
     return (
-      <div className="Conversion col-4 float-right">
+      <div className="Conversion col-md-4 ">
         <h1 className="currentTemp unit">{props.fahrenheit}º</h1>
         <h2>
           {" "}
