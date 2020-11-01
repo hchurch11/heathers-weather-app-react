@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+Footer {
+    font-size: 5vw;
+}
+
 .App {
     text-align: center;
 }

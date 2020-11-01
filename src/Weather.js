@@ -87,6 +87,9 @@ export default function Weather(props) {
               <img src={locationIcon} alt="location-icon" />
             </button>
           </div>
+          <div className="col- d-flex justify-content-end  w-auto ">
+            <h1 className="city">{weatherData.city}</h1>
+          </div>
         </form>
         <WeatherInfo data={weatherData} />
         <Forecast city={weatherData.city} />

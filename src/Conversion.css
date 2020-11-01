@@ -14,3 +14,7 @@
     color: #d8d7c3;
     font-weight: 900;
 }
+
+h1 {
+    font-family: "Major Mono Display", monospace;
+}
