@@ -26,9 +26,9 @@ export default function FormattedHours(props) {
 
   return (
     <div className="formattedHours">
-      <h3 className="currentTime text-lowercase">
+      <h2 className="currentTime text-lowercase">
         {weekDay} | {formatMilitaryHours(props)}
-      </h3>
+      </h2>
     </div>
   );
 }
