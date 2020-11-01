@@ -25,7 +25,7 @@ export default function Conversion(props) {
 
   if (unit === "fahrenheit") {
     return (
-      <div className="Conversion col-md-4 ">
+      <div className="Conversion col-md-4 flex-md-fill">
         <h1 className="currentTemp unit">{props.fahrenheit}º</h1>
         <h2>
           {" "}
@@ -47,7 +47,7 @@ export default function Conversion(props) {
     );
   } else if (unit === "celsius") {
     return (
-      <div className="Conversion">
+      <div className="Conversion col-md-4 flex-md-fill">
         <h1 className="currentTemp unit">{celsius()}º</h1>
         <h2>{highLow()}</h2>
         <button type="button" className="active btn btn-info btn-sm ">
